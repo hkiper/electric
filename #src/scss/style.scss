@@ -16,7 +16,7 @@
 
 //<Шрифт по умолчанию>==========================================================================================
 $fontFamily: "Montserrat", "sans-serif";
-$fontSize: 16;
+$fontSize: 18;
 //</Шрифт по умолчанию>==========================================================================================
 //</ШРИФТЫ>=======================================================================================================
 
@@ -32,6 +32,7 @@ $md4: 479.98;
 $mainColor: #000;
 $mainColor2:#2b2a2a;
 $mainColor3: #fff000;
+$mainColor4:#fffafa;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -94,5 +95,184 @@ body {
 	flex: 1 1 auto;
 }
 //===================================================================================================================================
+.info {
+	
+	// .info__wrapper
+	
+	&__wrapper {
+			background-color: $mainColor3;
+		}
+
+		// .info__items
+
+		&__items {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: 40px 0px;
+			@media (max-width: $md3+px) {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
+
+		// .info__item
+
+		&__item {
+			padding:0px 20px;
+			flex: 1 1 33.333%;
+			@media (max-width: $md3+px) {
+				flex: 0 0 96%;
+				padding:30px 0px;
+			}
+		}
+
+		// .info__text
+
+		&__text {
+			font-size: 19px;
+			margin-top: 20px;
+			line-height: 30px;
+			& li::before {
+				content: "-";
+				font-weight: 700;
+				padding: 0px 10px;
+			}
+		}
+}
+h3{
+	font-size: 22px;
+	font-weight: 700;
+	padding: 0px 10px;
+}
+h2{
+	font-size: 40px;
+	font-weight: 700;
+	text-align: center;
+}
+//==============================================================
+.services {
+
+	// .services__wrapper
+
+	&__wrapper {
+		background-color: #fffdfd;
+		padding: 60px 0px;
+	}
+
+	// .services__title-text
+
+	&__title-text {
+		font-size: 22px;
+		text-align: center;
+		margin: 20px 0px;
+	}
+
+	// .services__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+	}
+
+	// .services__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		height: 400px;
+		width: 29%;
+		border: 2px solid #000;
+		border-radius: 10px;
+		padding: 40px 20px;
+		@media (max-width: $md2+px) {
+			width: 45%;
+		}
+		@media (max-width: 600px) {
+			width: 94%;
+			height: auto;
+		}
+		& h3{
+			text-align: center;
+		}
+	}
+
+	// .services__item-text
+
+	&__item-text {
+		text-align: center;
+		font-weight: 400;
+		line-height: 25px;
+		font-size: 16px;
+		margin: 10px 0px;
+		flex: 1 1 auto;
+	}
+
+	// .services__item-link
+
+	&__item-link {
+		display: inline-block;
+		text-align: center;
+		position: relative;
+		&::before{
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 0px;
+			left: -27px;
+			background-image: url(../img/link.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+
+		}
+	}
+}
+
+.glow-button {
+	text-decoration: none;
+	display: inline-block;
+	padding: 15px 30px;
+	margin: 10px 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 40px 40px $mainColor3 inset, 0 0 0 0 $mainColor3;
+	font-weight: bold;
+	letter-spacing: 2px;
+	transition: .15s ease-in-out;
+	margin: 20px 0px;
+	color: #000;
+ }
+ .glow-button:hover {
+	box-shadow: 0 0 10px 0 $mainColor3 inset, 0 0 10px 4px $mainColor3;
+
+ }
+ .btn-link{
+	 display: flex;
+	 justify-content: center;
+	 flex-direction: column;
+	 align-items: center;
+ }
+ //====================================================================
+ .call-block {
+	padding: 50px;
+	// .call-block__wrapper
+	& h2{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	&__wrapper {
+		background-color: $mainColor3;
+	}
+	& .btn-link .glow-button{
+		box-shadow: 0 0 40px 40px rgb(255, 248, 248) inset, 0 0 0 0 rgb(255, 252, 252);
+		font-size: 25px;
+		&:hover{
+			box-shadow: 0 0 10px 0 #272725 inset, 0 0 10px 4px rgb(22, 21, 21);
+		}
+	}
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================

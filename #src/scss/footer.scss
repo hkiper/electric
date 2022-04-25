@@ -1,5 +1,66 @@
-footer{}
-//====================================================================================================
+.footer {
+
+	// .footer__content
+
+	&__content {
+		padding: 70px 0px;
+	}
+
+	// .footer__items
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	// .footer__item
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		/* align-items: flex-start; */
+		justify-content: center;
+		width: 32%;
+		& h3{
+			margin-bottom: 30px;
+		}
+	}
+
+	// .footer__text
+
+	&__text {
+		line-height: 30px;
+		& a{
+			color: $mainColor;
+	
+		}
+	}
+
+	// .footer__links
+
+	&__links {
+		& li a{
+			color: $mainColor;
+		}
+	}
+
+	// .footer__link
+
+	&__link {
+		font-size: 20px;
+		line-height: 30px;
+		margin-left: 10px;
+	}
+}
+
+.logo {
+	// .logo__text
+	&__text {
+		color: $mainColor;
+	}
+}
+
 
 //====================================================================================================
 
