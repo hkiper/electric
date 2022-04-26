@@ -1,0 +1,30 @@
+.aboutUs {
+	background-color: $mainColor3;
+	padding: 60px ;
+	@media (max-width: $md3+px) {
+		padding: 60px 10px;
+	}
+	// .aboutUs__wrapper
+
+	&__wrapper {
+		background-color: $mainColor4;
+		padding: 60px;
+		@media (max-width: $md3+px) {
+			padding: 60px 10px;
+		}
+		& h2{
+			text-align: left;
+			margin: 35px 0px 20px 0px;
+		}
+	}
+	
+	// .aboutUs__text
+	
+	&__text {
+		line-height: 27px;
+		margin-top: 20px;
+		& span {
+			font-weight: 800;
+		}
+	}
+}

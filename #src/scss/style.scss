@@ -33,13 +33,13 @@ $mainColor: #000;
 $mainColor2:#2b2a2a;
 $mainColor3: #fff000;
 $mainColor4:#fffafa;
-
+$mainColor5:#2b2a29;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
-	color: $mainColor;
+	color: $mainColor5;
 	&._lock {
 		overflow: hidden;
 	}
@@ -88,6 +88,7 @@ body {
 @import "header";
 @import "footer";
 @import "home";
+@import "aboutUs";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -149,6 +150,18 @@ h2{
 	font-size: 40px;
 	font-weight: 700;
 	text-align: center;
+	@media (max-width: $md3+px) {
+		font-size: 27px;
+		font-weight: 600;
+	}
+}
+h1{
+	font-size: 45px;
+	font-weight: 800;
+	@media (max-width: $md3+px) {
+		font-size: 30px;
+	font-weight: 700;
+	}
 }
 //==============================================================
 .services {
@@ -243,7 +256,7 @@ h2{
 	letter-spacing: 2px;
 	transition: .15s ease-in-out;
 	margin: 20px 0px;
-	color: #000;
+	color: $mainColor5;
  }
  .glow-button:hover {
 	box-shadow: 0 0 10px 0 $mainColor3 inset, 0 0 10px 4px $mainColor3;
@@ -257,11 +270,21 @@ h2{
  }
  //====================================================================
  .call-block {
-	padding: 50px;
+	padding: 60px 0px;
+	@media (max-width: $md3+px) {
+		padding: 60px 0px;
+	}
 	// .call-block__wrapper
 	& h2{
 		font-size: 30px;
 		margin-bottom: 20px;
+		line-height: 35px;
+	}
+	& h2 span{
+		@media (max-width: 600px) {
+			display: block;
+			width: auto;
+		}
 	}
 	&__wrapper {
 		background-color: $mainColor3;
@@ -274,5 +297,31 @@ h2{
 		}
 	}
 }
-
+//===============================================================
+.table-price {
+	margin-top: 60px;
+	text-align: left;
+	@media (max-width: 600px) {
+		font-size: 15px;
+	}
+	& th {
+		background-color: $mainColor3;
+		padding: 15px ;
+		font-size: 23px;
+		@media (max-width: 600px) {
+			padding: 15px 5px;
+			font-size: 17px;
+		}
+	}
+	& td {
+		padding: 6px;
+		@media (max-width: 600px) {
+			font-size: 15px;
+		}
+	}
+	& tr:nth-child(even) {
+		background-color: #dbddf0;
+		
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
