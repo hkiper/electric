@@ -98,6 +98,43 @@
 	}
 }
 
+#myBtn {
+	display: none; 
+	position: fixed; 
+	bottom: 20px; 
+	right: 30px; 
+	z-index: 99; 
+	border: none; 
+	outline: none; 
+	/* background-color: red;  */
+	color: white; 
+	cursor: pointer;
+	/* padding: 15px; */ 
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.356);
+	&::after{
+		content: "»";
+		position: absolute;
+		top: 0px;
+		left: 12px;
+		transform: rotateZ(-90deg);
+		font-size: 40px;
+	} 
+	animation: btnTop 2s infinite;
+	
+}
+
+#myBtn:hover {
+	background-color: #555; 
+}
+
+@keyframes btnTop{
+	0% {transform: translateY(0px); background-color: red;}
+	50% {transform: translateY(-20px);background-color: rgb(206, 209, 43);}
+	100% {transform: translateY(0px);background-color: red;}
+}
 
 //====================================================================================================
 

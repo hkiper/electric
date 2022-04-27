@@ -201,7 +201,7 @@ h1{
 		flex-direction: column;
 		height: 400px;
 		width: 29%;
-		border: 2px solid #000;
+		border: 2px solid rgb(43, 42, 42);
 		border-radius: 10px;
 		padding: 40px 20px;
 		@media (max-width: $md2+px) {
@@ -213,6 +213,9 @@ h1{
 		}
 		& h3{
 			text-align: center;
+		}
+		&:hover{
+			border: 2px solid rgb(189, 157, 157);
 		}
 	}
 
