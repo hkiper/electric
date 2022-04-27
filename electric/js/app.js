@@ -790,7 +790,12 @@ animate({
 			Element.prototype.msMatchesSelector;
 	}
 })();
-
+let linkLi = document.querySelector(".sevises-link");
+linkLi.addEventListener("click", function(){
+	let subLink = document.querySelector(".sub__links");
+		subLink.classList.toggle('_active');
+		linkLi.classList.toggle("_open");	
+ });
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {
